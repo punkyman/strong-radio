@@ -134,9 +134,9 @@
 // Define the version number, also used for webserver as Last-Modified header:
 #define VERSION "Fri, 05 Oct 2018 09:30:00 GMT"
 // TFT.  Define USETFT if required.
-#define USETFT
-#include <ESP8266WiFi.h>
-#include <ESPAsyncTCP.h>
+//#define USETFT
+#include <WiFi.h>
+#include <AsyncTCP.h>
 #include <ESPAsyncWebServer.h>
 #include <AsyncMqttClient.h>
 #include <SPI.h>
@@ -150,10 +150,11 @@
 #include <FS.h>
 #include <ArduinoOTA.h>
 #include <TinyXML.h>
+#include <SPIFFS.h>
 
 extern "C"
 {
-#include "user_interface.h"
+//#include "user_interface.h"
 }
 
 // Definitions for 3 control switches on analog input
